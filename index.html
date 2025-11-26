@@ -1,34 +1,58 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Italo Santos - Desenvolvedora Front-end</title>
-  <link rel="stylesheet" href="portifilio.css" />
+    <meta charset="UTF-8">
+    <title>UnicoMen - Início</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <header class="cabecalho">
-        <nav class="cabecalho__menu">
-          <div id="saporra">
-            <a class="cabecalho_menu_link" href="index.html">Home</a>
-            <a class="cabecalho_menu_link" href="about.html">Sobre mim</a>
-            <a class="cabecalho_menu_link" href="curriculum.html">Currículo</a>
-          </div>
-        </nav>
-    </header>
-  <div class="container">
-    <div class="content-left">
-      <h1>Eleve seu negócio digital <br> a outro nível <span>com um <br>Front-end de qualidade!</span></h1>
-      <p>Olá! Sou Italo, desenvolvedor Front-end com especialidade em React, HTML e CSS. Ajudo pequenos negócios e designers a colocarem em prática boas ideias. Vamos conversar?</p>
-      <div class="buttons" id="buttons">
-        <a href="https://www.instagram.com/" class="btn">Instagram</a>
-        <a href="https://github.com/?locale=pt-br" class="btn">GitHub</a>
-      </div>
+<header>
+    <h1>Saúde do Homem em Dia</h1>
+    <p>
+        Um espaço para conversar sobre saúde masculina de forma simples e direta:
+        corpo, mente, emoções, relações e espiritualidade. Vamos dar o primeiro passo juntos?
+    </p>
+    <!-- Foto simbólica, sutil -->
+    <div class="hero-image-wrap">
+        <img src="https://images.pexels.com/photos/4101143/pexels-photo-4101143.jpeg?auto=compress&cs=tinysrgb&w=1200"
+             alt="Homem em conversa com profissional de saúde, simbolizando cuidado e escuta.">
     </div>
-    <div class="content-right">
-      <!-- Substitua o src pela sua imagem -->
-      <img src="eu.png" alt="eu">
-    </div>
-  </div>
+</header>
+
+<main>
+    <!-- TELA INICIAL / WIZARD INTERATIVO -->
+    <section class="card card-large" id="inicio">
+        <span class="badge">Passo 1 • Conversa inicial</span>
+        <h2>Vamos falar rapidinho sobre se cuidar?</h2>
+        <p class="wizard-intro">
+            Responda essas perguntas de forma bem sincera. A cada resposta, eu te explico um pouco
+            mais sobre por que o autocuidado é tão importante para prevenir problemas físicos,
+            mentais, emocionais e espirituais. No final, você poderá ver um plano com exames
+            e hábitos recomendados.
+        </p>
+
+        <div class="wizard" id="wizard-container">
+            <!-- As perguntas vão sendo inseridas aqui via JavaScript -->
+        </div>
+
+        <div class="wizard-cta" id="wizard-cta" style="display:none;">
+            <p>
+                Gostou da conversa e quer ver de forma mais objetiva quais exames e atitudes podem
+                te ajudar a cuidar melhor da saúde?
+            </p>
+            <button type="button" id="go-to-checkup">
+                Ver exames e plano de cuidado
+            </button>
+        </div>
+    </section>
+</main>
+
+<footer>
+    Este site tem caráter educativo e não substitui consulta com profissionais de saúde.
+    Em caso de dúvidas ou sintomas, procure atendimento médico.
+</footer>
+
+<script src="wizard.js"></script>
 </body>
 </html>

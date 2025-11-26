@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Saúde do Homem em Dia - Exames e Cuidados</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+    <h1>Saúde do Homem em Dia</h1>
+    <p id="intro-msg">
+        Agora vamos tornar esse cuidado mais concreto: responda o questionário abaixo e veja
+        sugestões de exames e hábitos para fortalecer sua saúde física, mental, social,
+        emocional e espiritual.
+    </p>
+    <!-- Foto simbólica, sutil -->
+    <div class="hero-image-wrap">
+        <img src="https://images.pexels.com/photos/4101143/pexels-photo-4101143.jpeg?auto=compress&cs=tinysrgb&w=1200"
+             alt="Homem em conversa com profissional de saúde, simbolizando cuidado e escuta.">
+    </div>
+</header>
+
+<main>
+    <!-- QUESTIONÁRIO COMPLETO (EXAMES E HÁBITOS) -->
+    <section class="card" id="questionario">
+        <span class="badge">Passo 2 • Questionário de saúde</span>
+
+        <div class="questionario-header">
+            <div class="questionario-text">
+                <h2>Responda e veja suas recomendações personalizadas</h2>
+                <p style="font-size:.95rem;color:#444;margin-top:.4rem;">
+                    São perguntas rápidas sobre seu estilo de vida, sua saúde física e mental,
+                    e como você se informa. No final, você verá:
+                </p>
+                <ul class="intro-list">
+                    <li>Exames que vale a pena conversar com o médico;</li>
+                    <li>Hábitos que podem melhorar seu bem-estar;</li>
+                    <li>Dicas para buscar informação confiável sobre saúde masculina.</li>
+                </ul>
+            </div>
+            <figure class="questionario-figure">
+                <!-- Foto simbólica relacionada a apoio e prevenção -->
+                <img src="https://images.pexels.com/photos/5543374/pexels-photo-5543374.jpeg?auto=compress&cs=tinysrgb&w=1200"
+                     alt="Amigos conversando em ambiente calmo, simbolizando apoio e prevenção.">
+                <small>Imagem ilustrativa, com foco em apoio, diálogo e prevenção.</small>
+            </figure>
+        </div>
+
+        <form id="health-form">
+            <!-- 1. Idade -->
+            <div class="question">
+                <div class="question-title">1. Qual é a sua faixa etária?</div>
+                <small>Alguns exames ganham importância em determinadas fases da vida.</small>
+                <div class="options">
+                    <label>
+                        <input type="radio" name="age" value="<30" required>
+                        &lt; 30 anos
+                    </label>
+                    <label>
+                        <input type="radio" name="age" value="30-39">
+                        30 – 39 anos
+                    </label>
+                    <label>
+                        <input type="radio" name="age" value="40-49">
+                        40 – 49 anos
+                    </label>
+                    <label>
+                        <input type="radio" name="age" value="50+">
+                        50 anos ou mais
+                    </label>
+                </div>
+            </div>
+
+            <!-- 2. Frequência ao médico -->
+            <div class="question">
+                <div class="question-title">2. Com que frequência você faz consultas de rotina?</div>
+                <small>Check-up não é só quando aparece um problema.</small>
+                <div class="options">
+                    <label>
+                        <input type="radio" name="doctor" value="nunca" required>
+                        Quase nunca / só quando estou muito mal
+                    </label>
+                    <label>
+                        <input type="radio" name="doctor" value="às vezes">
+                        De vez em quando, mas sem regularidade
+                    </label>
+                    <label>
+                        <input type="radio" name="doctor" value="anual">
+                        Pelo menos 1 vez por ano
+                    </label>
+                </div>
+            </div>
+
+            <!-- 3. Atividade física -->
+            <div class="question">
+                <div class="question-title">3. Como está sua rotina de atividade física?</div>
+                <small>Ex.: caminhada, corrida, musculação, futebol, bicicleta, etc.</small>
+                <div class="options">
+                    <label>
+                        <input type="radio" name="activity" value="sedentario" required>
+                        Quase nunca faço exercícios
+                    </label>
+                    <label>
+                        <input type="radio" name="activity" value="algumas">
+                        1–2 vezes por semana
+                    </label>
+                    <label>
+                        <input type="radio" name="activity" value="regular">
+                        3+ vezes por semana
+                    </label>
+                </div>
+            </div>
+
+            <!-- 4. Alimentação -->
+            <div class="question">
+                <div class="question-title">4. Como você descreveria sua alimentação?</div>
+                <small>Seja sincero, a ideia é te ajudar 🙂</small>
+                <div class="options">
+                    <label>
+                        <input type="radio" name="diet" value="ruim" required>
+                        Muito fast food, frituras, doces, refrigerante
+                    </label>
+                    <label>
+                        <input type="radio" name="diet" value="media">
+                        Misturo alimentos saudáveis e não saudáveis
+                    </label>
+                    <label>
+                        <input type="radio" name="diet" value="boa">
+                        Geralmente equilibrada, com frutas, verduras e pouco ultraprocessado
+                    </label>
+                </div>
+            </div>
+
+            <!-- 5. Tabagismo -->
+            <div class="question">
+                <div class="question-title">5. Você fuma atualmente?</div>
+                <small>O tabagismo impacta fortemente a saúde do coração, pulmões e outros órgãos.</small>
+                <div class="options">
+                    <label>
+                        <input type="radio" name="smoker" value="nao" required>
+                        Não
+                    </label>
+                    <label>
+                        <input type="radio" name="smoker" value="sim">
+                        Sim, regularmente
+                    </label>
+                    <label>
+                        <input type="radio" name="smoker" value="parei">
+                        Já fumei, mas parei
+                    </label>
+                </div>
+            </div>
+
+            <!-- 6. Álcool -->
+            <div class="question">
+                <div class="question-title">6. E o consumo de bebidas alcoólicas?</div>
+                <small>Lembre que “social” também conta, dependendo da frequência e da quantidade.</small>
+                <div class="options">
+                    <label>
+                        <input type="radio" name="alcohol" value="frequente" required>
+                        Bebo com frequência (várias vezes na semana)
+                    </label>
+                    <label>
+                        <input type="radio" name="alcohol" value="social">
+                        Bebo socialmente (fins de semana / festas)
+                    </label>
+                    <label>
+                        <input type="radio" name="alcohol" value="raro">
+                        Raramente ou não bebo
+                    </label>
+                </div>
+            </div>
+
+            <!-- 7. Sono e estresse -->
+            <div class="question">
+                <div class="question-title">7. Como anda seu sono e seu nível de estresse?</div>
+                <small>Saúde mental e emocional também fazem parte da saúde do homem.</small>
+                <div class="options">
+                    <label>
+                        <input type="radio" name="sleep" value="ruim" required>
+                        Durmo mal e estou quase sempre estressado
+                    </label>
+                    <label>
+                        <input type="radio" name="sleep" value="regular">
+                        Durmo mais ou menos, com algum estresse
+                    </label>
+                    <label>
+                        <input type="radio" name="sleep" value="bom">
+                        Durmo bem e consigo lidar com o estresse
+                    </label>
+                </div>
+            </div>
+
+            <!-- 8. Saúde emocional / mental -->
+            <div class="question">
+                <div class="question-title">8. Nas últimas semanas, como você tem se sentido emocionalmente?</div>
+                <small>Humor, ânimo, motivação para as atividades do dia a dia.</small>
+                <div class="options">
+                    <label>
+                        <input type="radio" name="mental" value="ruim" required>
+                        Muito desanimado, ansioso ou sobrecarregado
+                    </label>
+                    <label>
+                        <input type="radio" name="mental" value="oscilando">
+                        Oscilando: alguns dias bem, outros muito para baixo
+                    </label>
+                    <label>
+                        <input type="radio" name="mental" value="bem">
+                        De forma geral, tenho me sentido bem
+                    </label>
+                </div>
+            </div>
+
+            <!-- 9. Rede de apoio social -->
+            <div class="question">
+                <div class="question-title">9. Como está sua rede de apoio social?</div>
+                <small>Amigos, família, comunidade, pessoas com quem você pode conversar de verdade.</small>
+                <div class="options">
+                    <label>
+                        <input type="radio" name="social" value="isolado" required>
+                        Sinto-me muito sozinho / quase não tenho com quem contar
+                    </label>
+                    <label>
+                        <input type="radio" name="social" value="alguns">
+                        Tenho algumas pessoas, mas nem sempre consigo me abrir
+                    </label>
+                    <label>
+                        <input type="radio" name="social" value="forte">
+                        Tenho uma boa rede de apoio e consigo pedir ajuda quando preciso
+                    </label>
+                </div>
+            </div>
+
+            <!-- 10. Acesso a informações confiáveis -->
+            <div class="question">
+                <div class="question-title">10. Sobre informações claras e confiáveis sobre saúde masculina:</div>
+                <small>
+                    Pensando em bem-estar físico, mental, social, emocional e espiritual, como você costuma se informar?
+                </small>
+                <div class="options">
+                    <label>
+                        <input type="radio" name="info" value="nao-busco" required>
+                        Quase não busco informações sobre saúde
+                    </label>
+                    <label>
+                        <input type="radio" name="info" value="redes">
+                        Busco mais em redes sociais e vídeos, mas nem sempre sei se é confiável
+                    </label>
+                    <label>
+                        <input type="radio" name="info" value="confiavel">
+                        Procuro profissionais de saúde e fontes reconhecidas (instituições, sociedades médicas, etc.)
+                    </label>
+                </div>
+            </div>
+
+            <button type="submit">Ver recomendações personalizadas</button>
+        </form>
+
+        <div id="results" class="results">
+            <div class="score">
+                Seu nível de cuidado atual (estimado):
+                <span id="score-label"></span>
+                <div class="score-bar">
+                    <div id="score-bar-fill" class="score-bar-fill"></div>
+                </div>
+                <div class="chips" id="chips-container"></div>
+            </div>
+
+            <div class="results-section">
+                <span class="tag">Exames a conversar com o médico</span>
+                <h3>Exames de rotina sugeridos</h3>
+                <ul id="exam-list"></ul>
+            </div>
+
+            <div class="results-section">
+                <span class="tag">Hábitos que fazem diferença</span>
+                <h3>O que você pode fazer para melhorar sua saúde</h3>
+                <ul id="habits-list"></ul>
+            </div>
+
+            <div class="results-section">
+                <span class="tag">Informação e apoio</span>
+                <h3>Como se fortalecer com informação confiável</h3>
+                <ul id="info-list"></ul>
+            </div>
+
+            <p class="notice">
+                🔎 <strong>Atenção:</strong> estas são orientações gerais para promoção de saúde
+                e prevenção. As necessidades de cada pessoa variam. Use estas informações como
+                ponto de partida para uma conversa com um(a) médico(a), enfermeiro(a), psicólogo(a)
+                ou outro profissional de saúde de confiança.
+            </p>
+        </div>
+    </section>
+</main>
+
+<footer>
+    Este site tem caráter educativo e não substitui consulta com profissionais de saúde.
+    Em caso de dúvidas ou sintomas, procure atendimento médico.
+</footer>
+
+<script src="questionario.js"></script>
+<script>
+    // Comunicação simples entre páginas: se veio da página inicial, mostra mensagem personalizada
+    const doneWizard = localStorage.getItem('wizardDone');
+    if (doneWizard === 'true') {
+        const intro = document.getElementById('intro-msg');
+        intro.textContent =
+            "Ótimo que você passou pela conversa inicial! Agora, responda o questionário abaixo para " +
+            "ver sugestões de exames e hábitos alinhados com o seu momento de vida.";
+    }
+</script>
+</body>
+</html>
